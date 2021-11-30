@@ -1,0 +1,27 @@
+{
+  "contracts": {
+    "GoogleProtobufAny": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "ProtoBufRuntime": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "SolTest": "b73d69449c05ff4080079c12326bd68aeb37d29f",
+    "TEST_PROTO_GLOBAL_ENUMS": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "TestInternalMsg1": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "TestInternalMsg2": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "TestInternalMsg3": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "TestInternalOneOfMessage1": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "TestInternalOneOfMessage2": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "TestMainMessage": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "TestOneOfMessage1": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "TestOneOfMessage2": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "TestOneOfMessage3": "1ce946f6a4eaa185320328620ccf999b9e86db7c"
+  },
+  "tests": {
+    "tests/test_decode.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "F",
+      "sha1": "8fc125e1a055bcf7ffdaeee83a62c3b102b37a51",
+      "txhash": []
+    }
+  },
+  "tx": {}
+}

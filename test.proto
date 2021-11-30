@@ -1,0 +1,84 @@
+syntax = "proto3";
+package test;
+
+option go_package = "cmd;main";
+
+message MainMessage {
+    oneof internal {
+        OneOfMessage1 msg1 = 1;
+        OneOfMessage2 msg2 = 2;
+        OneOfMessage3 msg3 = 3;
+    }
+}
+
+message OneOfMessage1 {
+    bytes field1 = 1;
+    bytes field2 = 2;
+    InternalMsg1 msg1 = 3;
+    repeated InternalMsg2 msg2 = 4;
+}
+
+message OneOfMessage2 {
+    bytes field = 1;
+    OneOfMessage1 field2 = 2;
+    OneOfMessage1 field3 = 3;
+}
+
+message OneOfMessage3 {
+  repeated InternalMsg3 field1 = 1;
+  repeated InternalMsg2 field2 = 2;
+}
+
+message InternalMsg1 {
+    Enum1 field1 = 1;
+    Enum1 field2 = 2;
+    Enum1 field3 = 3;
+    Enum2 field4 = 4;
+    bytes field5 = 5;
+}
+
+message InternalMsg2 {
+    Enum1 field1 = 1;
+    bytes field2 = 2;
+    bytes field3 = 3;
+}
+
+message InternalMsg3 {
+  oneof fieldOneOf {
+    InternalOneOfMessage1 field1 = 1;
+    InternalOneOfMessage2 field2 = 2;
+  }
+}
+
+message InternalOneOfMessage1 {
+  bytes field1 = 1;
+  bytes field2 = 2;
+  Enum1 field3 = 3;
+  repeated int32 field4 = 4;    
+}
+
+message InternalOneOfMessage2 {
+  bytes field1 = 1;
+  InternalOneOfMessage1 field2 = 2;
+  InternalOneOfMessage1 field3 = 3;
+}
+
+enum Enum1 {
+   ENUM1_OPTION0 = 0;
+   ENUM1_OPTION1 = 1;
+   ENUM1_OPTION2 = 2;
+   ENUM1_OPTION3 = 3;
+   ENUM1_OPTION4 = 4;
+   ENUM1_OPTION5 = 5;
+   ENUM1_OPTION6 = 6;
+}
+
+enum Enum2 {
+   ENUM2_OPTION0 = 0;
+   ENUM2_OPTION1 = 1;
+   ENUM2_OPTION2 = 2;
+   ENUM2_OPTION3 = 3;
+   ENUM2_OPTION4 = 4;
+   ENUM2_OPTION5 = 5;
+   ENUM2_OPTION6 = 6;
+}
