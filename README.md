@@ -65,3 +65,10 @@ tests/test_decode.py:12: VirtualMachineError
 FAILED tests/test_decode.py::test_decode - brownie.exceptions.VirtualMachineError: revert
 ================================================================= 1 failed in 2.46s ==================================================================
 ```
+
+## Hint for the maintainers
+If you comment out line 21 in ``cmd/main.go`` generator function
+```Go
+f1.Field4 = []int32{ rand.Int31(), rand.Int31(), rand.Int31()} // 3 is a magic number
+```
+and run the tests with the resulting ``MainMessage`` the bug disappears. Hence, the bug might reside in the way the ``[]int32`` array is decoded
